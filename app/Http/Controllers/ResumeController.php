@@ -15,7 +15,7 @@ class ResumeController extends Controller
         return DB::table( 'resumes' )->first();
     }
 
-    function experienceData( Request $request ) {
+    function experiencesData( Request $request ) {
         return DB::table( 'experiences' )->get();
     }
 

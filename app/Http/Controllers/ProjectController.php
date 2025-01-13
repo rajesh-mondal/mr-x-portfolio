@@ -11,7 +11,7 @@ class ProjectController extends Controller
         return view( 'pages.projects' );
     }
 
-    function projectData( Request $request ) {
+    function projectsData( Request $request ) {
         return DB::table( 'projects' )->get();
     }
 }
