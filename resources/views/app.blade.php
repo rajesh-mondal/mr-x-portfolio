@@ -12,6 +12,7 @@
         rel="stylesheet" />
     <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/style.css') }}" rel="stylesheet" />
+    <script src="{{ asset('js/axios.min.js') }}"></script>
 </head>
 
 <body>
@@ -26,7 +27,6 @@
 
     @include('components.footer')
 
-    <script src="{{ asset('js/axios.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
 </body>
 
