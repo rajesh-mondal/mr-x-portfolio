@@ -24,6 +24,18 @@
 </div>
 
 <script>
+    getResumeLink();
+    async function getResumeLink() {
+        try {
+            let URL = "/resumeLink"
+            let response = await axios.get(URL);
+            let link = response.data['downloadLink'];
+            document.getElementById('CVDownloadLink').setAttribute('href',link);
+        } catch (error) {
+            alert(error);
+        }
+    }
+
     getExpList();
     async function getExpList() {
         try {
