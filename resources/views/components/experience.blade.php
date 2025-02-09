@@ -40,6 +40,11 @@
     async function getExpList() {
         try {
             let URL = "/experiencesData"
+            
+            // Loader Show Content Hide
+            document.getElementById('loading-div').classList.remove('d-none');
+            document.getElementById('content-div').classList.add('d-none');
+
             let response = await axios.get(URL);
 
             response.data.forEach(item => {
