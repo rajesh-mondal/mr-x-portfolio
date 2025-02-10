@@ -29,4 +29,17 @@
             alert(error);
         }
     }
+
+    getSocialLink();
+    async function getSocialLink() {
+        try {
+            let URL = "/socialData"
+            let response = await axios.get(URL);
+            document.getElementById('twitter').href = response.data['twitterLink'];
+            document.getElementById('linkedin').href = response.data['linkedinLink'];
+            document.getElementById('github').href = response.data['githubLink'];
+        } catch (error) {
+            alert(error);
+        }
+    }
 </script>
