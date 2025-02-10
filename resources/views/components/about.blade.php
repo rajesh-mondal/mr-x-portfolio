@@ -16,3 +16,17 @@
         </div>
     </div>
 </section>
+
+<script>
+    getAboutDetail();
+    async function getAboutDetail() {
+        try {
+            let URL = "/aboutData"
+            let response = await axios.get(URL);
+            document.getElementById('about-title').innerHTML = response.data.title;
+            document.getElementById('about-des').innerHTML = response.data.details;
+        } catch (error) {
+            alert(error);
+        }
+    }
+</script>
