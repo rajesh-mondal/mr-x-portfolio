@@ -35,6 +35,11 @@
         try {
             let URL = "/socialData"
             let response = await axios.get(URL);
+
+            // Loader Hide Content Show
+            document.getElementById('loading-div').classList.add('d-none');
+            document.getElementById('content-div').classList.remove('d-none');
+
             document.getElementById('twitter').href = response.data['twitterLink'];
             document.getElementById('linkedin').href = response.data['linkedinLink'];
             document.getElementById('github').href = response.data['githubLink'];
